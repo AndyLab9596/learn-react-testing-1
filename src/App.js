@@ -22,10 +22,15 @@ function App() {
         onClick={handleChangeColor}>
         Change to {`${buttonColor === 'red' ? 'blue' : 'red'}`}
       </button>
-      <input type={'checkbox'}
+      <input
+        type={'checkbox'}
+        id="disable-button-checkbox"
         value={disabled}
         onChange={(e) => setDisabled(e.target.checked)}
       />
+      <label htmlFor='disable-button-checkbox' >
+        Disable button
+      </label>
     </div>
   );
 }
