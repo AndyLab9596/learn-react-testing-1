@@ -11,25 +11,25 @@ test('button has correct initial color, and updates when click', () => {
   /** */
 
   // find an element with a role of button and text of 'Change to blue
-  const colorButton = screen.getByRole('button', { name: 'Change to blue' });
+  const colorButton = screen.getByRole('button', { name: 'Change to MidnightBlue' });
 
   // expect the background color to be red
-  expect(colorButton).toHaveStyle({ backgroundColor: 'red' })
+  expect(colorButton).toHaveStyle({ backgroundColor: 'MediumVioletRed' })
 
   // click button
   fireEvent.click(colorButton);
 
   // expect the background color to be blue
-  expect(colorButton).toHaveStyle({ backgroundColor: 'blue' });
+  expect(colorButton).toHaveStyle({ backgroundColor: 'MidnightBlue' });
 
   // expect the button text to be 'Change to red'
-  expect(colorButton).toHaveTextContent('Change to red');
+  expect(colorButton).toHaveTextContent('Change to Medium Violet Red');
 
 });
 
 test('initial conditions', () => {
   render(<App />);
-  const colorButton = screen.getByRole('button', { name: 'Change to blue' });
+  const colorButton = screen.getByRole('button', { name: 'Change to MidnightBlue' });
   // check that the button starts out enabled
   expect(colorButton).toBeEnabled();
 
@@ -42,7 +42,7 @@ test('initial conditions', () => {
 test('When checkbox is checked, button should be disabled', () => {
   render(<App />);
 
-  const colorButton = screen.getByRole('button', { name: 'Change to blue' });
+  const colorButton = screen.getByRole('button', { name: 'Change to Midnight Blue' });
   const checkbox = screen.getByRole('checkbox', { name: 'Disable button' });
 
 
@@ -56,7 +56,7 @@ test('When checkbox is checked, button should be disabled', () => {
 test('button color is gray when disabled and reverts to red', () => {
   render(<App />);
 
-  const colorButton = screen.getByRole('button', { name: 'Change to blue' });
+  const colorButton = screen.getByRole('button', { name: 'Change to Midnight Blue' });
   const checkbox = screen.getByRole('checkbox', { name: 'Disable button' })
 
   fireEvent.click(checkbox);
@@ -65,7 +65,7 @@ test('button color is gray when disabled and reverts to red', () => {
 
   fireEvent.click(checkbox)
 
-  expect(colorButton).toHaveStyle({ backgroundColor: 'red' })
+  expect(colorButton).toHaveStyle({ backgroundColor: 'MediumVioletRed' })
 
 });
 
