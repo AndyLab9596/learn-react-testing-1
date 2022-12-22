@@ -10,14 +10,7 @@ function App() {
   const [disabled, setDisabled] = useState(false);
 
   const color = buttonColor === 'MediumVioletRed' ? 'MidnightBlue' : 'MediumVioletRed';
-
-  // const handleChangeColor = () => {
-  //   if (buttonColor === 'MediumVioletRed') {
-  //     setButtonColor('MidnightBlue');
-  //   } else {
-  //     setButtonColor('MediumVioletRed')
-  //   }
-  // }
+  console.log(color);
 
   return (
     <div>
