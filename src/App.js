@@ -11,14 +11,13 @@ function App() {
     } else {
       setButtonColor('red')
     }
-
   }
 
   return (
     <div>
       <button
         disabled={disabled}
-        style={{ backgroundColor: buttonColor }}
+        style={{ backgroundColor: disabled ? 'gray' : buttonColor }}
         onClick={handleChangeColor}>
         Change to {`${buttonColor === 'red' ? 'blue' : 'red'}`}
       </button>
